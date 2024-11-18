@@ -1,4 +1,4 @@
-# React Workshop: Building a To-Do List Application
+# React Workshop: Building a Shopping List Application
 
 Welcome to the React Workshop! In this workshop, we will build a simple shopping list 🛒 application using React. This README will guide you through the setup and provide an overview of the project structure.
 
@@ -25,7 +25,7 @@ Make sure you have the following installed on your machine:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd to-do-list
+    cd shopping-list
     ```
 3. Install the dependencies:
     ```bash
@@ -68,4 +68,4 @@ The `package.json` file includes the project dependencies and scripts. Key depen
 
 ## Conclusion
 
-By the end of this workshop, you will have a functional to-do list application built with React. Feel free to customize and expand the application further. Happy coding!
+By the end of this workshop, you will have a functional shopping list application built with React. Feel free to customize and expand the application further. Happy coding!
