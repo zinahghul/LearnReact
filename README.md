@@ -69,3 +69,5 @@ The `package.json` file includes the project dependencies and scripts. Key depen
 ## Conclusion
 
 By the end of this workshop, you will have a functional shopping list application built with React. Feel free to customize and expand the application further. Happy coding!
+
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
