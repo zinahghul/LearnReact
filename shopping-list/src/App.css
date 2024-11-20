@@ -1,240 +1,190 @@
-/* Global styles */
-* {
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #ffe0f3, #f0e5ff); /* Soft pink to pastel lavender gradient */
+    font-family: 'Comic Sans MS', sans-serif; /* Fun, playful font */
+    color: #333;
     margin: 0;
     padding: 0;
+    text-align: center; /* Center the content */
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Date Styling (Placed at the top) */
+.date {
+    font-size: 1.5rem;
+    color: #9c27b0; /* Soft purple */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3rem;
+    color: #f06292; /* Light pink */
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Time Styling (Larger for emphasis) */
+.time {
+    font-size: 4rem; /* Large time font */
+    font-weight: 700;
+    color: #f06292; /* Light pink */
+    text-shadow: 2px 2px 10px rgba(240, 98, 146, 0.5);
+    margin-top: 20px;
+}
+
+/* Seconds Styling */
+.seconds {
+    font-size: 1.3rem;
+    color: #ff4081; /* Deep pink for seconds */
+    margin-top: 5px;
+}
+
+/* Cute Buttons */
+.button {
+    background: #ff80ab; /* Soft pink button color */
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+/* Hover Effects for Buttons */
+.button:hover {
+    background: #f50057; /* Slightly deeper pink on hover */
+}
+
+/* Cute Input Fields */
+input, textarea {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: 1px solid #f06292;
+    background-color: #fce4ec;
+    width: 100%;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
 }
 
-/* Container styles */
-.app-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Title styles */
-.app-title {
-    text-align: center;
-    color: #333;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* Date and Time Styling */
-.date-time-container {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #2e3a59;
-    border-radius: 8px;
-    color: white;
-    font-size: 1.4em;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.date-time {
-    font-size: 1.4em;
-}
-
-/* Task list styles */
-.task-list {
-    list-style: none;
-    padding: 0;
-}
-
-.task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #b49add;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.task-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.task-item span {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.task-actions {
-    display: flex;
-    justify-content: space-between;
-}
-
-.task-buy-btn,
-.task-delete-btn {
-    background: none;
-    border: none;
-    color: #66138d;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.task-buy-btn:hover {
-    color: #28a745;
-}
-
-.task-delete-btn:hover {
-    color: #ff4500;
-}
-
-/* Input and button styles */
-.input-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.task-input {
-    width: 80%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #4d2e46;
-    border-radius: 5px;
+input:focus, textarea:focus {
     outline: none;
-    transition: border-color 0.3s ease;
+    border-color: #f50057;
 }
 
-.task-input:focus {
-    border-color: #ffa500;
-}
-
-.add-btn {
-    width: 15%;
-    padding: 10px;
-    font-size: 1em;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-btn:hover {
-    background-color: lightslategray;
-}
-
-/* Bought items styling */
-.bought-task-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.bought-task-list .task-item {
-    background-color: #28a745;
-    color: white;
-}
-
-/* Title for sections */
-.task-list-title {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Bought items section */
-.bought-items-section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.bought-items-title {
-    font-size: 1.5em;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.clear-bought-btn {
-    padding: 10px;
-    font-size: 1em;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.clear-bought-btn:hover {
-    background-color: darkred;
-}
-
-/* Category section */
-.category-section {
-    margin-top: 30px;
-}
-
-/* Category title */
-.category-title {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-}
-
-/* Clear bought items button container */
-.clear-bought-btn-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.clear-bought-btn {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.clear-bought-btn:hover {
-    background-color: #ff4500;
-}
-
-/* Instruction text */
-.instruction-text {
-    text-align: center;
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
     margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #555;
+}
+
+/* Cute Footer Styling */
+footer {
+    background: #f3e5f5;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #9c27b0;
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 480px) {
-    .input-container {
-        flex-direction: column;
-        align-items: center;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 
-    .task-input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+/* Remove bullet points from unordered lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Add more space between buttons and the food section */
+button {
+    margin-bottom: 20px; /* Increase the bottom margin to add space */
+}
 
-    .add-btn {
-        width: 100%;
-    }
+/* Adjust search bar width */
+input[type="text"] {
+    width: 250px; /* Set a specific width for the search bar */
+    padding: 8px; /* Add some padding to make it look better */
+}
+
+
+/* Container for the items section */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribute items on the left and right */
+    gap: 50px; /* Add some space between the left and right sections */
+}
+
+/* Styling for the left and right containers */
+.left-container, .right-container {
+    width: 45%; /* Give both containers a similar width */
+    padding: 20px;
+    background-color: #F8D1E0; /* Soft light pink background */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* More subtle pink buttons */
+button {
+    background-color: #FFB6C1; /* Light pink background */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded edges for buttons */
+    color: #4a4a4a; /* Darker text for contrast */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #FF69B4; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Make the button slightly larger on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Style for the title in the containers */
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+/* Make the search bar a bit smaller */
+input[type="text"] {
+    width: 250px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px; /* Add space below the search bar */
+}
+
+/* Optional: Style for the food items */
+.food-item {
+    margin-bottom: 10px;
 }
