@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Global Styles */
 body {
     background: linear-gradient(135deg, #ffe0f3, #f0e5ff); /* Soft pink to pastel lavender gradient */
@@ -12,9 +13,27 @@ body {
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+=======
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Container styles */
+.app-container {
+    max-width: 600px;
+    margin: 30px auto;
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+<<<<<<< HEAD
 /* Date Styling (Placed at the top) */
 .date {
     font-size: 1.5rem;
@@ -188,3 +207,227 @@ input[type="text"] {
 .food-item {
     margin-bottom: 10px;
 }
+=======
+/* Title styles */
+.app-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Date and Time Styling */
+.date-time-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2e3a59;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.date-time {
+    font-size: 1.4em;
+}
+
+/* Task list styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b49add;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.task-item span {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-buy-btn,
+.task-delete-btn {
+    background: none;
+    border: none;
+    color: #66138d;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.task-buy-btn:hover {
+    color: #28a745;
+}
+
+.task-delete-btn:hover {
+    color: #ff4500;
+}
+
+/* Input and button styles */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.task-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #4d2e46;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+    border-color: #ffa500;
+}
+
+.add-btn {
+    width: 15%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: lightslategray;
+}
+
+/* Bought items styling */
+.bought-task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.bought-task-list .task-item {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Title for sections */
+.task-list-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Bought items section */
+.bought-items-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bought-items-title {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.clear-bought-btn {
+    padding: 10px;
+    font-size: 1em;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-bought-btn:hover {
+    background-color: darkred;
+}
+
+/* Category section */
+.category-section {
+    margin-top: 30px;
+}
+
+/* Category title */
+.category-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Clear bought items button container */
+.clear-bought-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clear-bought-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-bought-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Instruction text */
+.instruction-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4

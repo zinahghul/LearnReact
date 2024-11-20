@@ -14,14 +14,22 @@ const getFoodEmoji = (item) => {
         "corn": "🌽", "eggplant": "🍆", "pepper": "🌶️", "onion": "🧅", "garlic": "🧄",
 
         // Meats
+<<<<<<< HEAD
         "chicken": "🍗", "steak": "🥩", "fish": "🐟", "sausage": "🌭",
+=======
+        "chicken": "🍗", "steak": "🥩", "fish": "🐟", "bacon": "🥓", "sausage": "🌭",
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
 
         // Desserts
         "cake": "🍰", "pie": "🥧", "cookie": "🍪", "donut": "🍩", "ice cream": "🍦",
         "popsicle": "🍡", "chocolate": "🍫",
 
         // Drinks
+<<<<<<< HEAD
         "coffee": "☕", "tea": "🍵", "cocktail": "🍸", "juice": "🧃",
+=======
+        "coffee": "☕", "tea": "🍵", "beer": "🍺", "wine": "🍷", "cocktail": "🍸", "juice": "🧃",
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
         "milk": "🥛", "soda": "🥤",
 
         // Breads & Grains
@@ -49,9 +57,15 @@ const getCategory = (item) => {
     const foodItems = [
         "apple", "banana", "grapes", "orange", "strawberry", "watermelon", "cherry", "peach",
         "pear", "pineapple", "kiwi", "lemon", "carrot", "potato", "tomato", "cucumber", "broccoli",
+<<<<<<< HEAD
         "corn", "eggplant", "pepper", "onion", "garlic", "chicken", "steak", "fish","sausage", 
         "cake", "pie", "cookie", "donut", "ice cream", "popsicle", "chocolate", "coffee",
         "tea", "cocktail", "juice", "milk", "soda", "bread", "croissant", "bagel",
+=======
+        "corn", "eggplant", "pepper", "onion", "garlic", "chicken", "steak", "fish", "bacon",
+        "sausage", "cake", "pie", "cookie", "donut", "ice cream", "popsicle", "chocolate", "coffee",
+        "tea", "beer", "wine", "cocktail", "juice", "milk", "soda", "bread", "croissant", "bagel",
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
         "pasta", "rice", "noodles", "taco", "burrito", "pizza", "hamburger", "hotdog", "sandwich",
         "salad", "sushi", "ramen", "dumpling", "noodle", "cheese", "butter", "honey", "olive", "popcorn"
     ];
@@ -107,6 +121,7 @@ export default function App() {
     const handleAddTask = () => {
         if (inputValue.trim()) {
             const category = getCategory(inputValue); // Get category for task
+<<<<<<< HEAD
             // Prevent duplicate tasks
             if (!tasks.some((task) => task.item.toLowerCase() === inputValue.toLowerCase())) {
                 setTasks([...tasks, { item: inputValue, category, emoji: getFoodEmoji(inputValue) }]);
@@ -114,6 +129,10 @@ export default function App() {
             } else {
                 alert('Item already added!');
             }
+=======
+            setTasks([...tasks, { item: inputValue, category, emoji: getFoodEmoji(inputValue) }]);
+            setInputValue(''); // Clear the input after adding a task
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
         }
     };
 
@@ -160,17 +179,35 @@ export default function App() {
                     {tasks.map((task, index) => (
                         <li key={index} className="task-item">
                             <span>{task.emoji} {task.item} ({task.category})</span>
+<<<<<<< HEAD
                             <button className="mark-btn" onClick={() => handleMarkAsBought(task, index)}>
                                 Mark as bought
                             </button>
                             <button className="delete-btn" onClick={() => handleDeleteTask(index)}>
                                 Delete
                             </button>
+=======
+                            <div className="task-actions">
+                                <button
+                                    className="task-buy-btn"
+                                    onClick={() => handleMarkAsBought(task, index)}
+                                >
+                                    ✅
+                                </button>
+                                <button
+                                    className="task-delete-btn"
+                                    onClick={() => handleDeleteTask(index)}
+                                >
+                                    ❌
+                                </button>
+                            </div>
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
                         </li>
                     ))}
                 </ul>
             </div>
 
+<<<<<<< HEAD
             <div className="bought-section">
                 <h2>Bought Items:</h2>
                 <ul className="task-list">
@@ -183,6 +220,24 @@ export default function App() {
                 {/* Button to clear bought items */}
                 <button className="clear-btn" onClick={handleClearBoughtItems}>Clear Bought Items</button>
             </div>
+=======
+            {/* Bought items section */}
+            {boughtTasks.length > 0 && (
+                <div className="bought-items-section">
+                    <h2 className="bought-items-title">Bought Items 🏷️</h2>
+                    <ul className="task-list">
+                        {boughtTasks.map((task, index) => (
+                            <li key={index} className="task-item">
+                                <span>{task.emoji} {task.item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <button className="clear-bought-btn" onClick={handleClearBoughtItems}>
+                        Clear Bought Items
+                    </button>
+                </div>
+            )}
+>>>>>>> a6599afc875508410eb55c61123a2ef09639ffa4
         </div>
     );
 }
